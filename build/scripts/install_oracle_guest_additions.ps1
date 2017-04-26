@@ -1,7 +1,5 @@
 Write-Host "Started Install Oracle VirtualBox Guest Additions installation"
 
-Stop-process -processname sysprep
-
 if ($env:install_vbox_tools -eq $true)
 {
   ((Get-PSDrive) | Where-Object {$_.Provider.Name -eq "FileSystem"}).Root | ForEach-Object {
