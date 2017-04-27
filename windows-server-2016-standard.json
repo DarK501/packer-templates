@@ -11,7 +11,7 @@
     "communicator" : "winrm",
     "winrm_username": "{{ user `username` }}",
     "winrm_password": "{{ user `password` }}",
-    "shutdown_command" : "c:\\windows\\system32\\sysprep\\sysprep.exe /generalize /oobe /shutdown /mode:vm",
+    "shutdown_command" : "c:\\windows\\system32\\sysprep\\sysprep.exe /generalize /oobe /shutdown /mode:vm /unattend:c:\\windows\\system32\\sysprep\\sysprep.xml",
     "post_shutdown_delay": "120s",
     "guest_additions_mode": "attach",
     "hard_drive_interface" : "sata",
@@ -55,8 +55,8 @@
     },
     {
       "type" : "file",
-      "source" : "build/unattend/2016/standard/autounattend.xml",
-      "destination" : "c:\\windows\\system32\\sysprep\\autounattend.xml"
+      "source" : "build/unattend/2016/standard/sysprep.xml",
+      "destination" : "c:\\windows\\system32\\sysprep\\sysprep.xml"
     },
     {
       "type" : "windows-restart",
@@ -68,7 +68,7 @@
     {
       "type": "vagrant",
       "keep_input_artifact": false,
-      "output": "windows_2016_gui_{{.Provider}}.box"
+      "output": "windows_2016_standard_{{.Provider}}.box"
     }
   ]
 }

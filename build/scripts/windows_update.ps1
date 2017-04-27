@@ -10,4 +10,4 @@ if (!((Get-PackageProvider).Name -contains "NuGet")) {
 
 Import-Module PSWindowsUpdate
 
-Get-WUInstall -WindowsUpdate -IgnoreUserInput -AcceptAll -Verbose -IgnoreReboot
+#Get-WUInstall -WindowsUpdate -IgnoreUserInput -AcceptAll -Verbose -IgnoreReboot
