@@ -11,7 +11,7 @@
     "communicator" : "winrm",
     "winrm_username": "{{ user `username` }}",
     "winrm_password": "{{ user `password` }}",
-    "shutdown_command" : "c:\\windows\\system32\\sysprep\\sysprep.exe /generalize /oobe /shutdown /unattend:c:\\windows\\system32\\sysprep\\autounattend.xml",
+    "shutdown_command" : "c:\\windows\\system32\\sysprep\\sysprep.exe /generalize /oobe /shutdown /mode:vm",
     "post_shutdown_delay": "120s",
     "guest_additions_mode": "attach",
     "hard_drive_interface" : "sata",
@@ -62,11 +62,6 @@
       "type" : "windows-restart",
       "restart_command" : "shutdown /r /c \"Windows update restart\" /t 5",
       "restart_timeout" : "10m"
-    },
-    {
-      "type" : "powershell",
-      "script" : "build/scripts/sysprep.ps1",
-      "valid_exit_codes" : [0, 16001]
     }
   ],
   "post-processors": [
