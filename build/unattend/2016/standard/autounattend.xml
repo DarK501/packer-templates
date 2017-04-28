@@ -69,6 +69,18 @@
                     <Value>VgA0AGcAcgA0AG4ANwAjACEAQQBkAG0AaQBuAGkAcwB0AHIAYQB0AG8AcgBQAGEAcwBzAHcAbwByAGQA</Value>
                     <PlainText>false</PlainText>
                 </AdministratorPassword>
+                <LocalAccounts>
+                    <LocalAccount wcm:action="add">
+                        <Password>
+                            <Value>VgA0AGcAcgA0AG4ANwAjACEAUABhAHMAcwB3AG8AcgBkAA==</Value>
+                            <PlainText>false</PlainText>
+                        </Password>
+                        <Description>Vagrant Automation User</Description>
+                        <DisplayName>Vagrant</DisplayName>
+                        <Group>Administrators</Group>
+                        <Name>Vagrant</Name>
+                    </LocalAccount>
+                </LocalAccounts>
             </UserAccounts>
             <FirstLogonCommands>
                 <SynchronousCommand wcm:action="add">
